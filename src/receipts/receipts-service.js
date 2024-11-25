@@ -5,7 +5,9 @@ const store = {};
 
 const ReceiptsService = {
   getPointsByReceiptId(id) {
-    return { "points": store[id].points };
+    return id in store 
+      ? { "points": store[id].points }
+      : null;
   },
   insertReceipt(receipt) {
     const id = nanoid(16);

@@ -17,7 +17,7 @@ const ReceiptsHelper = {
     }
 
     if (intTotal % 25 == 0) {
-      points += 50;
+      points += 25;
     }
 
     points += (Math.floor(receipt.items.length / 2) * 5);

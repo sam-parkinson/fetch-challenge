@@ -43,7 +43,11 @@ receiptsRouter
       req.params.receipt_id
     )
 
-    res.json(points);
+    if (points != null) {
+      res.json(points);
+    } else {
+      res.status(404).send(`Receipt with ID ${receipt_id} not found`);
+    }
   })
 
 export default receiptsRouter;
