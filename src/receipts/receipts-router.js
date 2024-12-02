@@ -39,15 +39,14 @@ receiptsRouter
 receiptsRouter
   .route('/:receipt_id/points')
   .get((req, res, next) => {
-    const points = ReceiptsService.getPointsByReceiptId(
-      req.params.receipt_id
-    )
+    const recId = req.params.receipt_id
+    const points = ReceiptsService.getPointsByReceiptId(recId)
 
     if (points != null) {
       res.json(points);
     } else {
-      res.status(404).send(`Receipt with ID ${receipt_id} not found`);
+      res.status(404).send(`Receipt with ID ${recId} not found`);
     }
-  })
+  });
 
 export default receiptsRouter;
