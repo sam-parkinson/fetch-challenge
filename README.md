@@ -1,5 +1,5 @@
 # Receipt processor challenge
-This is my submission for Fetch's coding challenge.
+This is my submission for Fetch's coding challenge. This is built using Node.js and Express, and can be run using the below instructions to set up a Docker container.
 
 ## Docker setup
 Clone the repository.
